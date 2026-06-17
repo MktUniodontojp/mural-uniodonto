@@ -5,10 +5,6 @@ services:
     plan: free
     buildCommand: npm install
     startCommand: node server.js
-    disk:
-      name: mural-dados
-      mountPath: /data-persistente
-      sizeGB: 1
     envVars:
       - key: JWT_SECRET
         generateValue: true
@@ -18,5 +14,3 @@ services:
         value: troque-esta-senha-123
       - key: PORT
         value: 10000
-      - key: DATA_DIR
-        value: /data-persistente
